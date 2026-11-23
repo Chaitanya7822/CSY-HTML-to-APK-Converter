@@ -1,0 +1,5 @@
+Required structure:
+www/index.html
+package.json
+capacitor.config.json
+.github/workflows/android-build.yml

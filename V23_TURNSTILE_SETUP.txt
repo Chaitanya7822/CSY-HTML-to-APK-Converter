@@ -1,0 +1,22 @@
+CSY APK Builder V23 - Turnstile protected APK dispatch
+
+Files to update in GitHub:
+1. Replace www/index.html with this ZIP's www/index.html.
+2. Keep the existing .github/workflows/android-build.yml unless you intentionally update it separately.
+
+Cloudflare Worker:
+1. Replace the deployed csy-apk-builder Worker code with worker.js from this ZIP.
+2. Keep these Worker Secrets:
+   - GITHUB_TOKEN
+   - TURNSTILE_SECRET_KEY
+3. Deploy the Worker after saving the code.
+
+Turnstile:
+- Site key is embedded in worker.js and is public.
+- The Turnstile widget must allow hostname: csy-apk-builder.yashwantchaitanya7.workers.dev
+- Secret key must remain a Cloudflare Worker Secret and must never be put in HTML or shared.
+
+Important limitations:
+- Build APK starts the existing GitHub Actions workflow for the repository's current main branch. It does not upload the currently edited local HTML/ZIP project to GitHub.
+- After dispatch, APK is downloaded from GitHub Actions > latest successful run > Artifacts. This version does not automatically fetch the artifact into the app.
+- The Turnstile challenge is loaded from the Cloudflare Worker domain in an iframe; test this on the actual Android WebView before relying on it.

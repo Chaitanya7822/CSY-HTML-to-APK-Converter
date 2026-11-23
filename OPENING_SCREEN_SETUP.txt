@@ -1,0 +1,1 @@
+CSY branding assets and app name are included. Apply logo and splash image in the native Android project resources before release. Opening style: premium

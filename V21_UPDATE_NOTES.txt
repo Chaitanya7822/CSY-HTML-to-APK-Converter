@@ -1,0 +1,5 @@
+CSY V21 UPDATE NOTES
+- Preserved the existing CSY Converter HTML interface and its four main sections.
+- Updated generated Android workflow and included workflow to use Java 21.
+- APK and AAB buttons now open the configured GitHub Actions page and display Hindi step-by-step guidance.
+- No GitHub token is stored in the app. Direct automatic dispatch and private status polling need a secure backend/GitHub App.

@@ -1,0 +1,9 @@
+{
+  "appId": "com.csy.htmltoapkconverter",
+  "appName": "CSY HTML to APK Converter",
+  "webDir": "www",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https"
+  }
+}

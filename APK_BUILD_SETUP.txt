@@ -1,0 +1,8 @@
+CSY APK Build connection update
+- www/index.html: Build APK button now calls the Cloudflare Worker endpoint.
+- worker.js: deploy this file as the Cloudflare Worker script named csy-apk-builder.
+- Cloudflare Worker secret required: GITHUB_TOKEN (fine-grained PAT with Actions: Read and write on Chaitanya7822/CSY-Android-Builder; Metadata read-only is automatic/required).
+- GitHub workflow: .github/workflows/android-build.yml. It builds a debug APK and uploads artifact CSY-Android-APK.
+- Worker endpoint: https://csy-apk-builder.yashwantchaitanya7.workers.dev/build
+- After clicking Build APK, open GitHub Actions and download the CSY-Android-APK artifact when the run succeeds.
+Security: never put the GitHub token in www/index.html or send it in chat.
